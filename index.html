@@ -14,10 +14,23 @@
         h5 {
             font-size: 36px; /* Increase font size */
         }
+		
 
-        .tableauPlaceholder {
+        
+		.tableauPlaceholder {
             margin: auto; /* Center the div horizontally */
         }
+		
+		.overlay {
+            position: absolute; /* Position overlay absolutely */
+            bottom: 0; /* Align overlay to top of parent */
+            left: 0; /* Align overlay to left of parent */
+            width: 100%; /* Make overlay cover entire width of parent */
+            height: 3%; /* Make overlay cover entire height of parent */
+            background-color: rgba(0, 0, 0, 1); /* Semi-transparent black overlay */
+            z-index: 1; /* Ensure overlay appears on top of other content */
+        }
+		
     </style>
 </head>
 <body>
@@ -44,7 +57,10 @@
             <param name='display_count' value='yes' />
             <param name='language' value='es-ES' />
         </object>
+		<div class="overlay"></div> <!-- Black overlay -->
     </div>
+	
+	 
     <script type='text/javascript'> 
         var divElement = document.getElementById('viz1714868757471');  
         var vizElement = divElement.getElementsByTagName('object')[0];   
